@@ -1,0 +1,9 @@
+
+<div class="login" *ngIf="expLab">
+	<h1>Work 💻</h1>
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+    	<input type="text" class="form-control" id="nombreE" name="nombreE" placeholder="Name"  [(ngModel)]="expLab.nombreE" required/>
+        <input type="text"  id="descripcionE" name="descripcionE" placeholder="Description"  [(ngModel)]="expLab.descripcionE" required/>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Update</button>
+    </form>
+</div>

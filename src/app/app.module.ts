@@ -14,6 +14,11 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
+import { NewWorkComponent } from './components/work/new-work.component';
+import { EditworkComponent } from './components/work/editwork.component';
+import { NeweducationComponent } from './components/education/neweducation.component';
+import { EditeducationComponent } from './components/education/editeducation.component';
+
 
 
 @NgModule({
@@ -26,7 +31,11 @@ import { interceptorProvider } from './service/interceptor-service';
     WorkComponent,
     EducationComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewWorkComponent,
+    EditworkComponent,
+    NeweducationComponent,
+    EditeducationComponent
   ],
   imports: [
     BrowserModule,

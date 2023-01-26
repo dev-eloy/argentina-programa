@@ -1,46 +1,39 @@
 <section class="resume-section p-3 p-lg-5" id="skills"></section>
 <div class="container">
-    <div class="row justify-content-md-center" id="work">
-      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center">
-        <h1 class="mb-4" id="skills-title">Education 🏫</h1>
-        <p class="text-secondary" id="text-title">I have worked in many companies and have carried out many projects, both professional and personal, and these were the most outstanding.</p>
+  <div class="row justify-content-md-center" id="work">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center">
+      <h1 class="mb-4" id="skills-title">Education 🧠</h1>
+      <p class="text-secondary" id="text-title">I have worked in many companies and have carried out many projects, both
+        professional and personal, and these were the most outstanding.</p>
 
-      </div>
     </div>
   </div>
-  
-    <div class="container overflow-hidden">
-      <div class="row justify-content-xl-center gy-3 gy-sm-4" id="cards">
-        <div class="col-12 col-sm-6 col-xl-5" id="card-1">
-          <div class="rounded shadow-sm p-3 p-md-4 p-xxl-8" id="card">
-            <h3 class="fw-bold mb-2 text-light" id="text-title-work">Argentina Programa (2022-2023)</h3>
-            <p class="text-secondary mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit assumenda temporibus, consequatur reiciendis enim dicta sint amet numquam a deleniti corrupti animi ut quo saepe ullam nesciunt et cumque corporis?</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-5">
-          <div class="rounded shadow-sm p-3 p-md-4 p-xxl-8" id="card">
-            <h3 class="fw-bold mb-2 text-light" id="text-title-work">Oracle Alura Latam (2022-2023)</h3>
-            <p class="text-secondary mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus officiis cumque delectus at blanditiis repudiandae voluptate eum? Est deserunt fuga aliquam minima, ullam libero repellat! Nam dicta unde libero? Dolores?</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-5">
-          <div class="rounded shadow-sm p-3 p-md-4 p-xxl-8" id="card">
-            <h3 class="fw-bold mb-3 text-light" id="text-title-work">Udemy Courses (2023)</h3>
-            <p class="text-secondary mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aut nobis veritatis ab dicta blanditiis veniam, natus laboriosam iure maiores nostrum nisi in nemo optio molestias laudantium velit aliquid ducimus.</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-5">
-          <div class="rounded shadow-sm p-3 p-md-4 p-xxl-8" id="card">
-            <h3 class="fw-bold mb-2 text-light" id="text-title-work">OpenBootcamp (2023)</h3>
-            <p class="text-secondary mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet quidem eos veniam commodi! Dicta, tempore sapiente! Assumenda culpa labore sit omnis, maxime nisi eligendi, accusantium fugiat placeat porro, sunt consequuntur?</p>
-  
-          </div>
-        </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-md-center" id="work">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center">
+      <button type="button" class="btn btn-primary" routerLink="/new-edu" *ngIf="isLogged">Add Education</button>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container overflow-hidden" >
+  <div class="row justify-content-xl-center gy-3 gy-sm-4" id="cards">
+    <div class="col-12 col-sm-6 col-xl-5" id="card-1"  *ngFor="let Education of educacion">
+      <div class="rounded shadow-sm p-3 p-md-4 p-xxl-8" id="card" >
+        <h3 class="fw-bold mb-2 text-light" id="text-title-work" >
+          {{Education.nombreE}}<button type="button" class="btn btn-outline-primary btn-sm"
+            routerLink="/edit-edu/{{Education.id}}" *ngIf="isLogged"> <i class="bi bi-pen-fill"></i> </button>
+          <button type="button" class="btn btn-outline-danger btn-sm" *ngIf="isLogged" (click)="delete(Education.id)" id="delete">
+            <i class="bi bi-trash-fill"></i> </button>
+
+        </h3>
+        <p class="text-secondary mb-3">{{Education.descripcionE}}</p>
       </div>
     </div>
 
-    <div class="container">
-      <footer class="py-3 my-4">
-        <p class="text-center text-muted">© 2023 Argentina Programa</p>
-      </footer>
-    </div>
+  </div>
+</div>

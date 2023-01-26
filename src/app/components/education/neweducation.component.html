@@ -1,0 +1,8 @@
+<div class="login">
+	<h1>Work 💻</h1>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+    	<input type="text" class="form-control" id="nombreE" name="nombreE" placeholder="Institution Name"  [(ngModel)]="nombreE" required/>
+        <input type="text"  id="descripcionE" name="descripcionE" placeholder="Description of your studies"  [(ngModel)]="descripcionE" required/>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Add</button>
+    </form>
+</div>
