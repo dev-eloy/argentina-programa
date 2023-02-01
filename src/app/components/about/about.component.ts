@@ -15,5 +15,6 @@ export class AboutComponent {
     ngOnInit(): void{
       this.personaService.getPersona().subscribe(data => {this.persona = data})
     }
+    
   
 }
